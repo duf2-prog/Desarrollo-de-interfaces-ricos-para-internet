@@ -1,6 +1,6 @@
 import React from 'react';
 import TaskLoggingHeader from './TaskLoggingHeader';
-import TaskLoggingContent from './TaskLoggingContent';
+// import TaskLoggingContent from './TaskLoggingContent';
 
 const TaskLogging: React.FC = () => {
   return (
