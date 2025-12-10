@@ -41,3 +41,54 @@
 .read-the-docs {
   color: #888;
 }
+
+.header {
+    background-color: rgb(40, 154, 248);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right:  20px;
+
+}
+
+.header h2 {
+    font-weight: normal;
+}
+.menuIcon {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dashTop,
+.dashMiddle,
+.dashBottom {
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background-color: white;
+  width: 40px;
+  height: 4px;  
+}
+
+.dashTop {
+  top: 6px;
+}
+
+.dashMiddle {
+  top: 16px;
+}
+
+.dashBottom {
+  bottom: 6px;
+}
+
+.searchIcon {
+  font-size: 30px;
+}

@@ -9,8 +9,9 @@ const TaskLogging: React.FC = () => {
       <div className="panel">
         <div>
           <TaskLoggingHeader/>
-          <TaskLoggingContent/>
+          {/* <TaskLoggingContent/> */}
         </div>
+
         {/* <div className="header">
           <div className="menuIcon">
             <div className="dashTop"></div>
