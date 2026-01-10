@@ -1,0 +1,33 @@
+.enrolList {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #fafafa;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Opcional: título si algún día lo añades */
+.enrolList h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Ajuste suave para la tabla de Fluent UI */
+.ms-DetailsList {
+  font-size: 14px;
+}
+
+.ms-DetailsHeader-cell {
+  font-weight: 600;
+  background-color: #f3f3f3;
+}
+
+.ms-DetailsRow:hover {
+  background-color: #eaeaea;
+}
