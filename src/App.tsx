@@ -17,7 +17,7 @@ export const foodItemsContext = React.createContext<{
 });
 
 function App() {
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([
+  const [menuItems] = useState<MenuItem[]>([
     {
       "id": 1,
       "name": "Hamburguesa de pollo",

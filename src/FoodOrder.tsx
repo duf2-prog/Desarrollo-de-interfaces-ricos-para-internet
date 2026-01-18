@@ -65,7 +65,7 @@ function FoodOrder(props: FoodOrderProps) {
                     className="sendButton"
                     onClick={() => handleClick()}
                 >
-                    Enviar pedido
+                    Añadir al carrito
                 </button>
 
                 <button
