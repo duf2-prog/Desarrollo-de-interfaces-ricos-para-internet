@@ -2,24 +2,24 @@ import type { MenuItem } from "./entities/entities";
 import './styles/Food.css';
 
 interface FoodsProps {
-    foodItems:MenuItem[];
-    onFoodClick(food:MenuItem):void;
+    foodItems: MenuItem[];
+    onFoodClick(food: MenuItem): void;
 }
 
-function Foods(props:FoodsProps) {
+function Foods(props: FoodsProps) {
     return (
         <>
             <h4 className="foodTitle">Carta</h4>
             <p className="foodSubtitle">Pulsa sobre cada producto para añadirlo</p>
             <ul className="ulFoods">
-                {props.foodItems.map((item) =>{
-                    return(
-                        <li key={item.id} 
-                            className="liFoods" 
+                {props.foodItems.map((item) => {
+                    return (
+                        <li key={item.id}
+                            className="liFoods"
                             onClick={() => props.onFoodClick(item)}>
                             <img className="foodImg"
-                            src={`/images/${item.image}`}
-                            alt={item.name} 
+                                src={`/images/${item.image}`}
+                                alt={item.name}
                             />
                             <div className="foodItem">
                                 <p className="foodDesc">{item.desc}</p>
