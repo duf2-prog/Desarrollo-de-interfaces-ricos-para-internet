@@ -2,6 +2,7 @@ import { useContext, useState, type MouseEventHandler } from "react";
 import type { MenuItem } from "./entities/entities";
 import "./styles/FoodOrder.css";
 import { foodItemsContext } from "./App";
+import logger from "./services/logging";
 
 interface FoodOrderProps {
     food: MenuItem;
@@ -16,12 +17,8 @@ function FoodOrder(props: FoodOrderProps) {
     const { menuItems, cart, setCart } = useContext(foodItemsContext);
 
     const handleClick = () => {
+        logger.info(`Añadido al carrito: ${props.food.name} x ${quantity}`);
         setIsOrdered(true);
-        menuItems.map((item: MenuItem) => {
-            if (item.id === props.food.id) {
-                item.quantity -= quantity;
-            }
-        });
         setCart([...cart, { item: props.food, quantity }]);
     }
 
