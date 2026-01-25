@@ -14,7 +14,7 @@ function FoodOrder(props: FoodOrderProps) {
     const [quantity, setQuantity] = useState<number>(1);
     const [isOrdered, setIsOrdered] = useState(false);
 
-    const { menuItems, cart, setCart } = useContext(foodItemsContext);
+    const { cart, setCart } = useContext(foodItemsContext);
 
     const handleClick = () => {
         logger.info(`Añadido al carrito: ${props.food.name} x ${quantity}`);
