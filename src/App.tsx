@@ -7,6 +7,7 @@ import Cart from './Cart';
 import { push, ref } from 'firebase/database';
 import { db } from './services/firebase';
 import logger from './services/logging';
+import CrashTests from './_test_/crashTest';
 const Foods = React.lazy(() => import('./Foods'));
 
 export const foodItemsContext = React.createContext<{
@@ -103,6 +104,7 @@ function App() {
         </div>
 
         <h3 className="title">Comida Rápida Online</h3>
+        {/* <CrashTests />  */}
         {!isChooseFoodPage && (
           <>
             <h4 className="subTitle">Menús</h4>
