@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   return {
     base: env.VITE_APP_BASE_URL || '/',
     build: {
-      outDir: 'docs',
+      outDir: 'dist',
     },
     plugins: [react()],
   }
