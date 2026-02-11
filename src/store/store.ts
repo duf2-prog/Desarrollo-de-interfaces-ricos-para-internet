@@ -3,7 +3,7 @@ import cartReducer from "./slices/cartSlice";
 import menuReducer from "./slices/menuSlice";
 import logger from "../services/logging";
 
-const loggingMiddleware: Middleware = (storeAPI) => (next) => (action: any) => {
+const loggingMiddleware: Middleware = (_storeAPI) => (next) => (action: any) => {
   logger.debug(`Redux action: ${action.type}`);
   return next(action);
 };
