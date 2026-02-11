@@ -1,8 +1,9 @@
-import { useContext, useState, type MouseEventHandler } from "react";
+import { useState, type MouseEventHandler } from "react";
 import type { MenuItem } from "./entities/entities";
 import "./styles/FoodOrder.css";
-import { foodItemsContext } from "./App";
 import logger from "./services/logging";
+import { useDispatch } from "react-redux";
+import { addToCart } from "./store/slices/cartSlice";
 
 interface FoodOrderProps {
     food: MenuItem;
@@ -14,12 +15,12 @@ function FoodOrder(props: FoodOrderProps) {
     const [quantity, setQuantity] = useState<number>(1);
     const [isOrdered, setIsOrdered] = useState(false);
 
-    const { cart, setCart } = useContext(foodItemsContext);
+    const dispatch = useDispatch();
 
     const handleClick = () => {
         logger.info(`Añadido al carrito: ${props.food.name} x ${quantity}`);
         setIsOrdered(true);
-        setCart([...cart, { item: props.food, quantity }]);
+        dispatch(addToCart({ item: props.food, quantity }));
     }
 
     return (
