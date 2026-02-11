@@ -1,7 +1,7 @@
 import type { MenuItem } from "./entities/entities";
-import { removeFromCart } from "./store/slices/cartSlice";
 import "./styles/Cart.css";
 import { useDispatch } from "react-redux";
+import { removeFromCart } from "./store/slices/cartSlice";
 
 interface CartProps {
     cartItems: { item: MenuItem; quantity: number }[];
