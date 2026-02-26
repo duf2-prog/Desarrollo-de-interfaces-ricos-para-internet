@@ -29,7 +29,7 @@ function FoodOrder(props: FoodOrderProps) {
 
             <img
                 className="foodOrderImg"
-                src={`/images/${props.food.image}`}
+                src={`${import.meta.env.BASE_URL}images/${props.food.image}`}
                 alt={props.food.name}
             />
 
