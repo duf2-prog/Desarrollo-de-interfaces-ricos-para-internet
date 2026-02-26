@@ -21,7 +21,7 @@ function App() {
           <div className='main-content'>
             <Routes>
               <Route path="/" element={<Menu />} />
-              <Route path="/order/:id" element={<Order />} />
+              <Route path="/order/:id" element={<ProtectedRoute><Order /></ProtectedRoute>} />
               <Route path="/cart" element={<ProtectedRoute><CartPage/></ProtectedRoute>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
